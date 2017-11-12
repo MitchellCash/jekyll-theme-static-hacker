@@ -12,9 +12,9 @@ layout: default
                     {% for post in site.posts %}
                     <td class="votelinks" valign="top">
                         <td class="title">
-                                        <a href="{{ post.url }}" class="storylink">{{ post.title }}</a>
+                                        <a href="{{ post.url | relative_url }}" class="storylink">{{ post.title }}</a>
                                         <span class="sitebit comhead">
-                                            (<a href="{{ post.url }}">
+                                            (<a href="{{ post.url | relative_url }}">
                                                 <span class="sitebit comhead">{{ post.url }}</span>
                                             </a>)
                                         </span>
@@ -22,9 +22,9 @@ layout: default
                                     <tr>
                                         <td colspan="2"></td>
                                         <td class="subtext">
-                                            by <a href="/profile">{{ site.author.name }}</a>
+                                            by <a href="{{ "/profile" | relative_url }}">{{ site.author.name }}</a>
                                             <span class="age">
-                                                <a href="{{ post.url }}">
+                                                <a href="{{ post.url | relative_url }}">
                                                     {% assign dateStart = post.date | date: "%s" %} <!-- Find post date -->
                                                     {% assign nowTimestamp = "now" | date: "%s" %} <!-- Get the current time -->
                                                     {% assign diffSeconds = nowTimestamp | minus: dateStart %} <!-- Calculate the difference in seconds between earliest blog post and current time -->

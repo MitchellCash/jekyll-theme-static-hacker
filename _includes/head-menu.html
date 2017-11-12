@@ -4,16 +4,16 @@
             <tbody>
                 <tr>
                     <td style="width:18px;padding-right:4px">
-                        <a href="/"><img src="/{{ site.logo }}" style="border:1px white solid;" height="18" width="18"></a>
+                        <a href="{{ "/" | relative_url }}"><img src="{{ site.logo | relative_url }}" style="border:1px white solid;" height="18" width="18"></a>
                     </td>
                     <td style="line-height:12pt; height:10px;">
                         <span class="pagetop">
-                            <b class="hnname"><a href="/">{{ site.title }}</a></b>
+                            <b class="hnname"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></b>
                         </span>
                     </td>
                     <td style="text-align:right;padding-right:4px;">
                         <span class="pagetop">
-                            <a href="/profile">{{ site.author.name }}</a>
+                            <a href="{{ "/profile" | relative_url }}">{{ site.author.name }}</a>
                         </span>
                     </td>
                 </tr>

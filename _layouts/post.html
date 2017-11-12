@@ -11,15 +11,15 @@ layout: default
                     </td>
                     <td width="14px"></td>
                     <td class="title">
-                        <a href="{{ page.url }}" class="storylink">{{ page.title }}</a>
-                        <span class="sitebit comhead">(<a href="{{ page.url }}"><span class="sitebit comhead">{{ page.url }}</span></a>)</span>
+                        <a href="{{ page.url | relative_url }}" class="storylink">{{ page.title }}</a>
+                        <span class="sitebit comhead">(<a href="{{ page.url | relative_url }}"><span class="sitebit comhead">{{ page.url }}</span></a>)</span>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2"></td>
-                    <td class="subtext">by <a href="/profile" class="hnuser">{{ site.author.name }}</a>
+                    <td class="subtext">by <a href="{{ "/profile" | relative_url }}" class="hnuser">{{ site.author.name }}</a>
                         <span class="age">
-                            <a href="item?id=15670382">
+                            <a href="{{ page.url | relative_url }}">
                                 {% assign dateStart = page.date | date: "%s" %} <!-- Find page date -->
                                 {% assign nowTimestamp = "now" | date: "%s" %} <!-- Get the current time -->
                                 {% assign diffSeconds = nowTimestamp | minus: dateStart %} <!-- Calculate the difference in seconds between earliest blog post and current time -->

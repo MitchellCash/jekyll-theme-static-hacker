@@ -1,3 +1,5 @@
+remote_theme: "mitchellcash/jekyll-theme-static-hacker"
+
 # Site Settings
 title: Static Hacker
 logo: sh.gif
@@ -17,7 +19,14 @@ exclude:
     - .sass-cache
     - Gemfile
     - Gemfile.lock
-    - /docs # ignore Static Hacker /docs
 
 # Conversion
 markdown: kramdown
+
+# Plugins (previously gems:)
+plugins:
+    - jekyll-remote-theme
+
+# mimic GitHub Pages with --safe
+whitelist:
+    - jekyll-remote-theme
