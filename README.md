@@ -1,5 +1,7 @@
 # jekyll-theme-static-hacker
 
+[![Build Status](https://travis-ci.org/mitchellcash/jekyll-theme-static-hacker.svg?branch=master)](https://travis-ci.org/mitchellcash/jekyll-theme-static-hacker)
+
 Static Hacker is a Jekyll theme for readers of Hacker News.
 
 ## Installation
