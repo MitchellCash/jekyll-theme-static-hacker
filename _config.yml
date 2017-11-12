@@ -1,6 +1,22 @@
+# Site Settings
 title: Static Hacker
-author: Mitchell Cash
-email: mitchell@mitchellcash.com
-description: > # this means to ignore newlines until the next "key: value"
-  This is a cool Jekyll theme, check it out!
 logo: sh.gif
+
+# Site Author
+author:
+    name: Mitchell Cash
+    bio: "This is a cool Jekyll theme, check it out!"
+    email: mitchell@mitchellcash.com
+
+# Reading Files
+exclude:
+    - vendor
+    - .asset-cache
+    - .bundle
+    - .jekyll-assets-cache
+    - .sass-cache
+    - Gemfile
+    - Gemfile.lock
+
+# Conversion
+markdown: kramdown
