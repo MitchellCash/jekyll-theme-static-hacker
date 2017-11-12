@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<tr>
+    <td>
+        <table class="itemlist" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td class="title" valign="top" align="right">
+                        <span class="rank">1.</span>
+                    </td>
+                    {% for post in site.posts %}
+                    <td class="votelinks" valign="top">
+                        <td class="title">
+                                        <a href="{{ post.url }}" class="storylink">{{ post.title }}</a>
+                                        <span class="sitebit comhead">
+                                            (<a href="{{ post.url }}">
+                                                <span class="sitebit comhead">{{ post.url }}</span>
+                                            </a>)
+                                        </span>
+                                    </td>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td class="subtext">
+                                            by <a href="/profile">{{ site.author }}</a>
+                                            <span class="age"><a href="{{ post.url }}">{{ post.date | date: "%-d %B %Y" }}</a></span>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                    <tr class="spacer" style="height:5px"></tr>
+                                    <tr class="morespace" style="height:10px"></tr>
+                                    <!-- <tr>
+                                        <td colspan="2"></td>
+                                        <td class="title">
+                                            <a href="news?p=3" class="morelink" rel="nofollow">More</a>
+                                        </td> -->
+                                    </tr>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <tr style="height:10px"></tr>
+            <td>
+                <table width="100%" cellspacing="0" cellpadding="1"><tbody><tr><td bgcolor="#ff6600"></td></tr></tbody></table>
+            </td>
+            <tr style="height:20px"></tr>
+        </tr>
