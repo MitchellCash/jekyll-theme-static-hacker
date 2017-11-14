@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+{% if page.id == "profile" %}
+    <title>Profile: {{ site.author.name }} | {{ site.title }}</title>
+{% elsif page.id == "home" %}
+    <title>{{ site.title }}</title>
+{% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+{% endif %}
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
